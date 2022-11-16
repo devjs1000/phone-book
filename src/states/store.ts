@@ -4,7 +4,8 @@ import loginSlice from "./login.slice";
 const store = configureStore({
     reducer: {
         login: loginSlice
-    }
+    },
+    devTools: true,
 })
 
 export type AppDispatch = typeof store.dispatch;

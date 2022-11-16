@@ -1,20 +1,23 @@
 import { Box } from "@chakra-ui/react";
-import React, { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Route from "./route";
+import Nav from "./components/Nav";
+import Route from "./Route";
+import './index.css';
 
 const App = () => {
   const isLogged = useSelector((state: any) => state.login.isLogged);
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const navigateUrl = isLogged ? "/" : "/login";
     navigate(navigateUrl);
   }, [isLogged]);
 
   return (
     <Box>
+      <Nav />
       <Route />
     </Box>
   );

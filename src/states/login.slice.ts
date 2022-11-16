@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    storedUsername: "",
-    storedPassword: "",
-    isLogged: false
+    storedUsername: "foo",
+    storedPassword: "bar",
+    isLogged: true
 }
 
 const loginSlice = createSlice({
@@ -11,9 +11,11 @@ const loginSlice = createSlice({
     initialState,
     reducers: {
         login: (state, action) => {
-            state.storedUsername = action.payload.username;
-            state.storedPassword = action.payload.password;
-            state.isLogged = true;
+            const { username, password } = action.payload;
+            const { storedPassword, storedUsername } = state;
+            if (username === storedUsername && password === storedPassword) {
+                state.isLogged = true;
+            }
         },
         logout: (state) => {
             state.isLogged = false;
