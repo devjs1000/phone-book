@@ -21,5 +21,5 @@ vite
 ```
 
 ### website is live at
-<a href="https://vercel.com/devjs1000/phone-book" target="_blank">go to website</a>
+<a href="https://zesty-mochi-5fed44.netlify.app/" target="_blank">go to website</a>
 
