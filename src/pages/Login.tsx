@@ -46,6 +46,7 @@ export const Login = () => {
         "linear(to-br, blackAlpha.900, blue.900)",
       ]}
       backdropFilter={"blur(100px)"}
+      color={'white'}
     >
       <Box
         bg={"whiteAlpha.500"}
